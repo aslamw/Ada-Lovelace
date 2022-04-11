@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ada Lovelace</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-shadow: none;
+
+        }
+        body{
+            background-color: rgb(219, 214, 214);
+            text-align: center;
+        }
+        .containerOne{
+            background-color: #191970;
+            width: 100vw;
+            height: 150px;
+
+            box-shadow: 10px 5px 8px black;
+
+            animation: block backwards 2s ease-in-out;
+        }
+        @keyframes block{
+            from{
+                height: 0px;
+            }
+            to{
+                height: 150px;
+            }
+        }
+        .face{
+            border-radius: 100%;
+            border: solid 8px #191970;
+            width: 10%;
+            height: 200px;
+
+            animation: face backwards 4s ease-in-out;
+        }
+        .face:hover{
+            border: solid 8px white;
+            box-shadow: 5px 5px 5px black;
+        }
+        @keyframes face{
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+
+        .containerTwo{
+            justify-content: center;
+
+            padding: 4%;
+            margin-top: 10%;
+            
+            background-color: #2F4F4F;
+            text-align: center;
+
+            box-shadow: -5px -5px 10px black;
+        }
+        .block{
+            display: flex;
+            justify-content: space-around;
+        }
+        .block img{
+            margin-top: 10%;
+
+            height: 80%;
+            width: 600px;
+            border-radius: 50px;
+        }
+        .block img:hover{
+            transform: scale(1.05);
+        }
+        .containerTwo ul{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+
+            box-shadow: 5px 5px 10px black;
+
+        }
+        
+        .containerTwo li{
+            all: none;
+            padding: 2%;
+
+            height: 20%;
+            width: 500px;
+
+            text-align: center;
+            border: 1px solid gray;
+
+        }
+        .containerTwo li:hover{
+            background-color: white;
+            transform: scale(1.05);
+        }
+        .containerTwo a{
+            color:#2F4F4F;
+            text-decoration: none;
+
+            font-size: 25px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <header class="containerOne"> 
+        <a href="https://pt.wikipedia.org/wiki/Ada_Lovelace">
+            <img class="face" src="data:image/jpeg;base64,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" alt="face">
+    </a>
+ 
+    </header>
+    <h1 style="margin: 0 auto; margin-top: 5%; color: #2F4F4F; text-decoration: underline;">Ada Lovelace</h1>
+    <main class="containerTwo">
+        <h3 style="color: white; width: 80%; margin-left: 10%;">
+            Augusta Ada Byron King, Condessa de Lovelace (nascida Byron, 10 de dezembro de 1815 - 27 de novembro de 1852), agora conhecida como Ada Lovelace, foi uma matemática e escritora inglesa. Ela agora é reconhecida principalmente por ter escrito o primeiro algoritmo a ser processado por uma máquina, a Máquina Analítica de Charles Babbage.
+        </h3>
+        <div class="block">
+            <img class="textOne" src="https://www.programaria.org/wp-content/uploads/2016/12/Ada-Lovelace-iQ-980x653.jpg" alt="calculation-Ada">
+            <img class="textTwo" src="https://img.ibxk.com.br/2018/07/26/ada-26095357009384.png" alt="manuscript">
+        </div>
+        <h3 style="color: white; width: 80%; margin-left: 2%; padding: 10%;">
+            Legado <br>
+
+            <br> A linguagem de programação Ada foi criada em homenagem a Ada Lovelace pelo Departamento de Defesa dos Estados Unidos. A documentação linguística foi aprovada em 10 de dezembro de 1980.
+
+            Em 1981, a Association of Women in Computing criou o Prêmio Ada Lovelace. Em 1998, a British Computing Association criou a Medalha Lovelace e em 2008 iniciou uma competição anual para estudantes do sexo feminino. A British Computing Association é patrocinadora do Lovelace Colloquium, que é uma conferência anual para estudantes de graduação do sexo feminino. Ada College é uma escola extracurricular focada em tecnologia localizada em Tottenham Hale, Londres.
+            
+            Toda segunda terça-feira de outubro, desde 2009, é comemorado o Ada Lovelace Day,[34] que visa “dar destaque às mulheres nas ciências, tecnologia, engenharia e matemática”, além de “criar novos modelos para meninas e mulheres”. mulheres". Entre os eventos está a Maratona de Edição da Wikipédia, com o objetivo de aumentar a representação de mulheres na Wikipédia em termos de artigos e editores, para reduzir o preconceito de gênero. A Iniciativa Ada é uma organização sem fins lucrativos dedicada a aumentar o envolvimento das mulheres em em 2009, por ocasião da comemoração do primeiro Ada Lovelace Day, o artista visual Sydney Pádua criou a história em quadrinhos "The Thrilling Adventures of Lovelace and Babbage",[36] que, ao contar a história de Charles Babbage e da Condessa Ada Lovelace, também apresenta uma leitura descontraída dos dois. Em 2015, o quadrinho virou livro de mesmo nome.
+            
+            A Ada Developers Academy em Seattle é uma academia sem fins lucrativos com o objetivo de aumentar a diversidade em tecnologia treinando mulheres cis, trans e não-binárias para se tornarem engenheiras de software.
+            
+            Em 27 de julho de 2018, o senador norte-americano Ron Wyden apresentou a designação de 9 de outubro de 2018 como Dia Nacional de Ada Lovelace: "Para honrar a vida e as contribuições de Ada Lovelace como uma mulher líder em ciências e matemática". A resolução (S.Res.592) foi considerada e adotada sem emendas e com um preâmbulo por unanimidade.
+        </h3>
+        <ul class="list">
+            <li><a href="https://pt.wikipedia.org/wiki/M%C3%A1quina_anal%C3%ADtica">Motor analítico</a></li>
+            <li ><a href="https://pt.wikipedia.org/wiki/Charles_Babbage">Charles Babbage.</a></li>
+            <li><a href="./index.html">Inglês</a></li>
+        </ul>
+    </main>
+</body>
+</html>
